@@ -35,6 +35,5 @@ class KoaServer {
   }
 }
 
-//Run server
 const server = new KoaServer(config);
 server.startServer();
