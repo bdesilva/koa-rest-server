@@ -22,11 +22,11 @@ class KoaServer {
   }
 
   setupMiddleware() {
+    //Disabling CORS till I figure out the Chrome issue with my REACT client.
     this.app.use(cors(this.config.corsOptions));
     this.app.use(parser());
     this.app.use(logger());
-    this.app.use(this.router.koaRouter.routes());     
-    this.app.use(this.router.koaRouter.allowedMethods());       
+    this.app.use(this.router.koaRouter.routes());
   }
 
   startServer() {

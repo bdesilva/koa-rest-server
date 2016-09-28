@@ -6,7 +6,8 @@ export class LoginController {
     };
   }
 
-  authorize(body) {    
-    return this.users[body.username] === body.password;
+  authorize(params) {
+    console.dir(params);
+    return this.users[params.username] === params.password;
   }
 }

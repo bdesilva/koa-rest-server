@@ -7,7 +7,7 @@ export class Routes {
   }
 
   async login(next) {
-    const authorized = await new LoginController().authorize(this.request.body);
+    const authorized = await new LoginController().authorize(this.params);
     this.body = authorized;
     await next;
   }

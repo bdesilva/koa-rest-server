@@ -19,6 +19,8 @@ export class Router {
 
   setupRoutes() {
     this.router.get('/', this.routes.index);
-    this.router.post('/login', this.routes.login);      
+    //TODO: Enable POST route once CORS issue is fixed, revertign to GET for demo purposes.
+    //this.router.post('/login', this.routes.login);
+    this.router.get('/login/:username/:password', this.routes.login);
   }
 }
